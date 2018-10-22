@@ -10,7 +10,7 @@ public class QianNiuNiuTest {
 
 	@Test
 	public void test() throws URISyntaxException {
-		Path parent = Paths.get(getClass().getResource("").toURI());
+		Path parent = Paths.get("data");
 		Path txt = parent.resolve("Ǯţţ��ֵ.txt");
 		Path csv = parent.resolve("Ǯţţ��ֵ.csv");
 

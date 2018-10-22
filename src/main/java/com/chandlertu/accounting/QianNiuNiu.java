@@ -14,8 +14,10 @@ public class QianNiuNiu {
 		try {
 			byte[] bytes = Files.readAllBytes(txt);
 			String string = new String(bytes, StandardCharsets.UTF_8);
-			string = string.replaceAll(",", "").replaceAll("\\+", ",").replaceAll("提现-", "提现,").replaceAll(System.getProperty("line.separator"),
-					",");
+			string = string.replaceAll(",", "").replaceAll("\\+", ",").replaceAll("提现-", "提现,")
+					.replaceAll(System.getProperty("line.separator") + System.getProperty("line.separator"),
+							System.getProperty("line.separator"))
+					.replaceAll(System.getProperty("line.separator"), ",");
 
 			List<String> lines = new ArrayList<String>();
 			int index = string.indexOf("状态") + "状态".length();

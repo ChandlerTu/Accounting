@@ -6,21 +6,21 @@ import java.nio.file.Paths;
 
 import org.junit.Test;
 
-public class PpdaiTest {
+public class YooliTest {
 
 	@Test
 	public void test() throws URISyntaxException {
 		Path parent = Paths.get("data");
-		Path txt = parent.resolve("拍拍贷充值.txt");
-		Path csv = parent.resolve("拍拍贷充值.csv");
+		Path txt = parent.resolve("有利网充值.txt");
+		Path csv = parent.resolve("有利网充值.csv");
 
-		Ppdai ppdai = new Ppdai();
-		ppdai.toCsv(txt, csv);
+		Yooli yooli = new Yooli();
+		yooli.toCsv(txt, csv);
 		System.out.println(csv);
 
-		txt = parent.resolve("拍拍贷提现.txt");
-		csv = parent.resolve("拍拍贷提现.csv");
-		ppdai.toCsv(txt, csv);
+		txt = parent.resolve("有利网提现.txt");
+		csv = parent.resolve("有利网提现.csv");
+		yooli.toCsv(txt, csv);
 		System.out.println(csv);
 	}
 
